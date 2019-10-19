@@ -1,0 +1,27 @@
+{
+  "name": "zmcontrol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "tsc && pkg --config ./package.json --out-path ./dist/ -t node10-linux-x64,node10-macos-x64 ./lib/main.js",
+    "install": "sudo `which node` install.js /usr/bin/zmcontrol.pl"
+  },
+  "author": "Russell Weir",
+  "license": "ISC",
+  "dependencies": {
+    "death": "^1.1.0",
+    "glob": "^7.1.4",
+    "ini": "^1.3.5",
+    "mysql": "^2.17.1",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.7",
+    "why-is-node-running": "^2.1.0"
+  },
+  "pkg": {
+    "scripts": "lib/**/*.js"
+  }
+}
